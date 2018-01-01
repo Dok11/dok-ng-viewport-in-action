@@ -1,28 +1,45 @@
-# Main
+# Angular module for working with viewport
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.0.
+## Installation
 
-## Development server
+Load module and save in the package.json  
+`npm i dok-ng-viewport-in-action`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Import module into module of your app like this:
+```ts
+@NgModule({
+    imports: [DokNgViewportInActionModule],
+    providers: [ViewportInActionService],
+})
+```
 
-## Code scaffolding
+And use in the template of component:
+```html
+<div dokNgViewportInAction
+     class="slide-in"
+     classes="slide-in_on"></div>
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Contain of module
 
-## Build
+### Attributive directive `dokNgViewportInAction`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Purpose: use for set any css classes for html-element or run any function by entering element into viewport.  
+Possible options:
+- `classes` - Class names which will be setup for element when it will in the viewport;
+- `initTimeout` - Timeout for initialization;
+- `strictTimeout` - Timeout for class setup;
+- `imgToLoad` - Array of images with attribute `[data-src]` which loading must be first
+- `distance` - Distance from bottom edge to viewport when need setup classes;
+- `viewportInActionDebug` - Debug in the console;
+- `viewportInActionFn` - Function which will be run when classes setups.
 
-## Running unit tests
+### Useful service ViewportInActionService
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Public methods:
+- `getDispatchEvent()` - Returns observable with force recalculate events;
+- `getEnableStatus()` - Returns state of service enable or disable (true/false);
+- `setEnableStatus()` - Method for service enable or disable;
+- `forceDispatch()` - Runs check setup classes;
+- `resetAnimationInContainer()` - Rerun animations into html-container;
+- `checkIsInViewport()` - Method detect when element in the viewport.
