@@ -11,8 +11,8 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Dok11/dok-ng-viewport-in-action",
-  }
+    "url": "https://github.com/Dok11/dok-ng-viewport-in-action"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve --aot",
