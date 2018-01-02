@@ -9,7 +9,6 @@ Import module into module of your app like this:
 ```ts
 @NgModule({
     imports: [DokNgViewportInActionModule],
-    providers: [ViewportInActionService],
 })
 ```
 
@@ -43,3 +42,28 @@ Public methods:
 - `forceDispatch()` - Runs check setup classes;
 - `resetAnimationInContainer()` - Rerun animations into html-container;
 - `checkIsInViewport()` - Method detect when element in the viewport.
+
+## More examples
+
+### Usage module configuration
+
+You can use default options for directive by `forRoot` like this:
+```ts
+// AoT requires an exported function for factories
+export function ViewportInActionCustomFn() {
+	console.log('>>> custom function for entry element into viewport');
+}
+
+@NgModule({
+    imports: [
+        BrowserModule,
+        DokNgViewportInActionModule.forRoot({
+            distance: 100,
+            viewportInActionDebug: true,
+            viewportInActionFn: ViewportInActionCustomFn,
+        }),
+    ],
+})
+```
+
+Any argument of options are not required but in example you can see all of these.
