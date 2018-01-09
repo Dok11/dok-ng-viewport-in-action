@@ -8,15 +8,13 @@ Load module and save in the package.json
 Import module into module of your app like this:
 ```ts
 @NgModule({
-    imports: [DokNgViewportInActionModule],
+    imports: [DokNgViewportInActionModule.forRoot()],
 })
 ```
 
 And use in the template of component:
 ```html
-<div dokNgViewportInAction
-     class="slide-in"
-     classes="slide-in_on"></div>
+<div dokNgViewportInAction classes="slide-in_on"></div>
 ```
 
 ## Contain of module

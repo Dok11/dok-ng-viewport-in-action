@@ -22,7 +22,6 @@ export function ViewportInActionCustomFn() {
 			customFn: ViewportInActionCustomFn,
 		}),
 	],
-	providers: [],
 	bootstrap: [AppComponent]
 })
 export class AppModule {
