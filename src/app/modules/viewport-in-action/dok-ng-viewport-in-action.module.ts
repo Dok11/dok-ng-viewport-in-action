@@ -15,16 +15,14 @@ import {ViewportInActionConfig} from './classes/viewport-in-action-config';
     exports: [
         ViewportInActionDirective,
     ],
-    providers: [
-        ViewportInActionService,
-    ],
 })
 export class DokNgViewportInActionModule {
 	public static forRoot(config: ViewportInActionConfig): ModuleWithProviders {
 		return {
 			ngModule: DokNgViewportInActionModule,
 			providers: [
-				{ provide: ViewportInActionConfig, useValue: config }
+				{ provide: ViewportInActionConfig, useValue: config },
+				ViewportInActionService
 			],
 		};
 	}

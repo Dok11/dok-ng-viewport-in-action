@@ -74,8 +74,8 @@ export class ViewportInActionDirective implements OnInit {
 		const config = this.viewportInActionService.config;
 
 		this.distance              = config.distance || 0;
-		this.viewportInActionDebug = config.viewportInActionDebug || false;
-		this.viewportInActionFn    = config.viewportInActionFn || null;
+		this.viewportInActionDebug = config.debug || false;
+		this.viewportInActionFn    = config.customFn || null;
 	}
 
 

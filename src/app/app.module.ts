@@ -18,8 +18,8 @@ export function ViewportInActionCustomFn() {
 		BrowserModule,
 		DokNgViewportInActionModule.forRoot({
 			distance: 100,
-			viewportInActionDebug: true,
-			viewportInActionFn: ViewportInActionCustomFn,
+			debug: true,
+			customFn: ViewportInActionCustomFn,
 		}),
 	],
 	providers: [],

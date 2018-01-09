@@ -3,8 +3,8 @@ export class ViewportInActionConfig {
 	distance?: number;
 
 	/** Debug in the console */
-	viewportInActionDebug?: boolean;
+	debug?: boolean;
 
 	/** Function which will be run when classes setups */
-	viewportInActionFn?(): any;
+	customFn?(): any;
 }

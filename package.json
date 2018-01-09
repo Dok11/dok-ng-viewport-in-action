@@ -1,6 +1,6 @@
 {
   "name": "dok-ng-viewport-in-action",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "MIT",
   "description": "Module for make effects with html elements when scrolling page with dependence to current viewport. Also have useful service for detecting any html element in viewport",
   "keywords": [
