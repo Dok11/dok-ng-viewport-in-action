@@ -11,6 +11,9 @@ import {ViewportInActionConfig} from './classes/viewport-in-action-config';
     exports: [
         ViewportInActionDirective,
     ],
+	providers: [
+		ViewportInActionService,
+	]
 })
 export class DokNgViewportInActionModule {
 	public static forRoot(config: ViewportInActionConfig): ModuleWithProviders {
