@@ -1,5 +1,9 @@
 # Angular module for working with viewport
 
+## Demo
+
+See here: https://stackblitz.com/github/Dok11/dok-ng-viewport-in-action
+
 ## Installation
 
 Load module and save in the package.json  
